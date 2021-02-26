@@ -1,0 +1,163 @@
+@font-face {
+    font-family: "Mayenne Sans Regular";
+    src: url("assets/Mayenne_Sans-Regular_web.woff2") format("woff2");
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+
+body {
+    font-family: "Mayenne Sans Regular";
+    background: rgb(214, 214, 214);
+    color: rgb(36, 33, 224);
+}
+.calendar-wrap{
+    display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
+}
+header {
+	text-align: center;
+}
+h1{
+    padding: 0;
+}
+h2{
+    padding: 0;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+#calendar {
+	width: 100%;	
+}
+
+#calendar a {
+	color: rgb(36, 33, 224);
+	text-decoration: none;
+}
+
+#calendar ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+#calendar li {
+	display: block;
+	float: left;
+	width:14.342%;
+	padding: 5px;
+	box-sizing:border-box;
+	border: 1px solid rgb(36, 33, 224);
+	margin-right: -1px;
+	margin-bottom: -1px;
+}
+
+#calendar ul.weekdays {
+	height: 40px;
+	background: rgb(36, 33, 224);
+}
+
+#calendar ul.weekdays li {
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 20px;
+	border: none !important;
+	padding: 10px 6px;
+	color: rgb(214, 214, 214);
+	font-size: 13px;
+}
+
+#calendar .days li {
+	height: 180px;
+}
+
+#calendar .days li:hover {
+    background: rgb(192, 192, 212);
+    width: 20%;
+    /* height: 20%; */
+    /* color: rgb(19, 19, 19); */
+}
+
+#calendar .date {
+	/* text-align: center; */
+	/* margin-bottom: 5px; */
+	padding: 1rem;
+	/* background: red; */
+	color: rgb(192, 192, 212);
+	/* width: 20px; */
+	/* border-radius: 50%; */
+    float: right;
+    color:rgb(36, 33, 224);
+}
+
+#calendar .event {
+	/* clear: both; */
+	display: block;
+	font-size: 13px;
+	border-radius: 4px;
+	padding: 5px;
+	margin-top: 40px;
+	margin-bottom: 5px;
+	line-height: 14px;
+	background: #e4f2f2;
+	border: 1px solid #b5dbdc;
+	color: #009aaf;
+	text-decoration: none;
+}
+
+#calendar .event-desc {
+	color: #666;
+	margin: 3px 0 7px 0;
+	text-decoration: none;	
+}
+
+#calendar .feb {
+	background: rgb(182, 181, 181);
+	/* color: #666; */
+}
+
+img{
+    width: 100%;
+    /* display: flex; */
+}
+
+.click{
+    color: rgb(214, 14, 107);
+}
+
+/* ============================
+				Mobile Responsiveness
+   ============================*/
+
+
+@media(max-width: 768px) {
+
+	#calendar .weekdays, #calendar .feb {
+		display: none;
+	}
+
+	#calendar li {
+		height: auto !important;
+		border: 1px solid rgb(36, 33, 224);
+		width: 100%;
+		padding: 10px;
+        margin-bottom: -1px;
+        
+	}
+
+	#calendar .date {
+		float: none;
+    }
+    #calendar .days li:hover {
+        background: rgb(192, 192, 212);
+        width: 100%;
+        /* height: 105%; */
+        /* height: 20%; */
+        /* color: rgb(19, 19, 19); */
+    }
+}
